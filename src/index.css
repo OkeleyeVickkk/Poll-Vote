@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: FONT;
+	src: url("./assets/fonts/Syne-VariableFont_wght.ttf");
+}
+:root {
+	--font-family: FONT;
+}
+* {
+	transition: all 300ms ease-in-out;
+	text-rendering: optimizeLegibility;
+	font-family: var(--font-family);
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+.no-scroll::-webkit-scrollbar {
+	width: 5px;
+}
+
+.no-scroll::-webkit-scrollbar-track {
+	background: #3c4764;
+	border-radius: 9999px;
+}
+
+/* Handle */
+.no-scroll::-webkit-scrollbar-thumb {
+	background: #182341;
+	border-radius: 90px;
+}
+
+@media all and (max-width: 500px) {
+	html {
+		font-size: 15px;
+	}
+}
