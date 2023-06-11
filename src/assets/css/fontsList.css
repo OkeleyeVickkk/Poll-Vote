@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "Syne";
+	src: url("../fonts/Syne-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Sora";
+	src: url("../fonts/Sora-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "IBMPlexSans";
+	src: url("../fonts/IBMPlexSans-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Oxygen";
+	src: url("../fonts/Oxygen-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Mulish";
+	src: url("../fonts/Mulish-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Söhne";
+	src: url("../fonts/Shone-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/Stolzl-Book.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Nunito Sans";
+	src: url("../fonts/NunitoSans-VariableFont.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Lora";
+	src: url("../fonts/Lora-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
