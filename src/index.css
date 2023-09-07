@@ -2,17 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: FONT;
-	src: url("./assets/fonts/Syne-VariableFont_wght.ttf");
-}
-:root {
-	--font-family: FONT;
-}
 * {
 	transition: all 300ms ease-in-out;
 	text-rendering: optimizeLegibility;
-	font-family: var(--font-family);
 }
 body::-webkit-scrollbar {
 	display: none;

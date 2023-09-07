@@ -1,15 +1,11 @@
 import React from "react";
-import Preloader from "./assets/utilities/Preloader";
+import HomePage from "./page_components/HomePageFolder/HomePage";
 
 function App() {
 	return (
-		<React.Fragment>
-			<div className="relative">
-				<React.Fragment>
-					<Preloader />
-				</React.Fragment>
-			</div>
-		</React.Fragment>
+		<div className="relative">
+			<HomePage />
+		</div>
 	);
 }
 
