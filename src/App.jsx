@@ -1,12 +1,27 @@
 import React from "react";
-import HomePage from "./page_components/HomePageFolder/HomePage";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+
+// route layouts
+
+// pages
+import * as LandingPage from "./pages";
+
+//auth pages
+
+// 404 page
+import Error from "./pages/error/Error.jsx";
+
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route>
+			<Route path="/" Component={LandingPage.default}></Route>
+			<Route path="*" Component={Error}></Route>
+		</Route>
+	)
+);
 
 function App() {
-	return (
-		<div className="relative">
-			<HomePage />
-		</div>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;
