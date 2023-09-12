@@ -14,8 +14,8 @@ import Error from "./pages/error/Error.jsx";
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route>
-			<Route path="/" Component={LandingPage.default}></Route>
-			<Route path="*" Component={Error}></Route>
+			<Route path="/" index Component={LandingPage.default} />
+			<Route path="*" Component={Error} />
 		</Route>
 	)
 );
