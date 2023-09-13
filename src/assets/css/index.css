@@ -29,3 +29,8 @@ body::-webkit-scrollbar {
 .no-scroll::-webkit-scrollbar-thumb {
 	border-radius: 90px;
 }
+@layer components {
+	.img-fluid {
+		@apply max-w-full h-auto;
+	}
+}
