@@ -8,10 +8,10 @@ const Header = () => {
 				<Link to="">Logo</Link>
 			</div>
 			<div className="flex items-center gap-3">
-				<Link to="" className="px-5">
+				<Link to="login" className="px-5">
 					Log In
 				</Link>
-				<Link to="" className="font-bold shadow-cat hover:shadow-cat bg-primary hover:bg-primary-dark text-white py-3 px-8">
+				<Link to="register" className="font-bold shadow-cat hover:shadow-cat bg-primary hover:bg-primary-dark text-white py-3 px-8">
 					Sign up
 				</Link>
 			</div>

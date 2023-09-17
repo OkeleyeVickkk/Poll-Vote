@@ -1,10 +1,10 @@
-import Header from "../components/UIComponents/Header";
+import Header from "../components/Layouts/Header";
 import { Link } from "react-router-dom";
-import Icon from "../components/Icons";
+import Icon from "../components/Icon";
 import sparkle from "../assets/media/svgs/sparkles-one.svg";
 import Scribble from "../assets/media/svgs/scribbble.svg";
 
-export default function index() {
+export default function LandingPage() {
 	return (
 		<div className="max-w-4xl mx-auto">
 			<>
@@ -32,10 +32,10 @@ export default function index() {
 						</div>
 						<div>
 							<Link
-								to=""
+								to="register"
 								className="group bg-primary hover:bg-primary-dark font-bold text-white shadow-cat hover:shadow-hoverCat py-3 flex items-center gap-3 px-4">
 								<Icon iconName="guidance:left-arrow" style="group-hover:scale-0 group-hover:-ml-8 ml-0 scale-100 w-5 h-5" />
-								<span className="">Get started for free</span>
+								<span>Get started for free</span>
 								<Icon iconName="guidance:left-arrow" style="group-hover:scale-100 group-hover:mr-0 -mr-8 scale-0 w-5 h-5" />
 							</Link>
 						</div>
