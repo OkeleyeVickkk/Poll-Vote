@@ -1,13 +1,18 @@
-import React from "react";
-import GoogleImage from "../../../assets/media/svgs/7123025_logo_google_g_icon.svg";
 import InputField from "../../../components/InputField";
-import { Link } from "react-router-dom";
+import AnchorLink from "../../../components/AnchorLink";
+import GoogleImage from "../../../assets/media/svgs/7123025_logo_google_g_icon.svg";
 
-const RegisterComponent = () => {
+export default function LoginComponent() {
 	return (
 		<div className="p-4 w-[90%] sm:w-3/4 lg:w-3/5 mx-auto flex flex-col gap-6">
 			<div className="v-title">
 				<h1 className="text-4xl font-extrabold text-slate-800">Sign up as a host</h1>
+			</div>
+			<div className="space-x-1">
+				<span className="font-semibold text-slate-600">Have an account?</span>
+				<AnchorLink href="/login" style="text-primary hover:text-primary-dark font-bold tracking-wide">
+					Login
+				</AnchorLink>
 			</div>
 			<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md hover:bg-zinc-100/40 w-full">
 				<div className="flex items-center gap-2 justify-center">
@@ -30,16 +35,13 @@ const RegisterComponent = () => {
 						<InputField type="email" label="Email" />
 						<InputField type="password" label="Password" />
 					</div>
-					<div className="text-center space-x-1 mt-10">
-						<span className="font-semibold text-slate-600">Have an account?</span>
-						<Link to="/login" className="text-primary hover:text-primary-dark font-bold tracking-wide">
+					<div className="my-6">
+						<button type="submit" className="w-full rounded-md py-3 tracking-wide font-bold text-white bg-primary hover:bg-primary-dark">
 							Login
-						</Link>
+						</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	);
-};
-
-export default RegisterComponent;
+}

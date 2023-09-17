@@ -1,24 +1,27 @@
-import React from "react";
+import { forwardRef } from "react";
 import Icon from "./Icon";
 
-const InputField = ({ label, icon, type, placeholder, value, onChangeFunc }) => {
+const InputField = forwardRef(({ label, icon, type, placeholder, value, onChangeFunc }, ref) => {
 	return (
-		<div className="relative">
+		<div className="relative group">
 			{label && (
 				<label className="font-bold text-sm text-black/80" htmlFor="">
 					{label}
 				</label>
 			)}
 			<input
-				className={`min-h-[2.9rem] rounded-md w-full outline-none focus:outline-none border px-4 transition ease-linear focus:border-primary`}
+				className={`min-h-[3rem] rounded-md w-full outline-none focus:outline-none border caret-primary-dark text-sm sm:text-base transition ease-linear focus:border-primary-dark font-semibold text-slate-700 ${
+					icon ? "px-10" : "px-4"
+				}`}
 				type={type}
 				onChange={onChangeFunc}
 				placeholder={placeholder}
 				value={value}
+				ref={type === "password" ? ref : null}
 			/>
-			<Icon iconName={icon} style="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-5" />
+			{icon && <Icon iconName={icon} style="absolute left-2 top-1/2 h-6 w-6 text-slate-400 group-focus-within:text-primary-dark transition-none" />}
 		</div>
 	);
-};
+});
 
 export default InputField;

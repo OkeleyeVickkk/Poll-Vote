@@ -1,5 +1,5 @@
 import React from "react";
-import PasscodeComponent from "./passcode";
+import PasscodeComponent from "../passcode";
 import RegisterComponent from "./register";
 
 const Register = () => {
@@ -10,7 +10,7 @@ const Register = () => {
 					<section className="md:col-span-4 col-span-full text-white bg-primary-dark rounded-md flex items-center justify-center">
 						<PasscodeComponent />
 					</section>
-					<section className="bg-white col-span-full md:col-span-8 py-8 flex items-center justify-center overflow-y-auto rounded-t-[3rem] lg:rounded-none">
+					<section className="bg-white col-span-full md:col-span-8 py-8 pt-32 flex items-center justify-center overflow-y-auto rounded-t-[3rem] lg:rounded-none">
 						<RegisterComponent />
 					</section>
 				</div>
