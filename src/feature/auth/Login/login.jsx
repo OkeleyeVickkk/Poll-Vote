@@ -3,11 +3,17 @@ import InputField from "../../../components/InputField";
 import AnchorLink from "../../../components/AnchorLink";
 import Icon from "../../../components/Icon";
 import { useRef } from "react";
+import { useAuthStore } from "../../store/appStore";
 
 const RegisterComponent = () => {
 	const passwordRef = useRef();
+	const { passwordvisibility, togglePass } = useAuthStore((state) => ({
+		passwordvisibility: state.isVisible,
+		togglePass: state.togglePassword,
+	}));
 
 	function togglePassword() {
+		togglePass();
 		const ref = passwordRef.current;
 		if (ref && ref.type === "password") {
 			return (ref.type = "text");
@@ -31,7 +37,7 @@ const RegisterComponent = () => {
 					<div className="v-image-wrapper">
 						<img src={GoogleImage} className="max-w-full h-auto w-8" />
 					</div>
-					<span className="font-medium text-sm">Sign up with Google</span>
+					<span className="font-medium text-sm">Log in with Google</span>
 				</div>
 			</button>
 			<div className="relative w-full border-t">
@@ -39,7 +45,7 @@ const RegisterComponent = () => {
 					or
 				</span>
 			</div>
-			<div>
+			<>
 				<form action="">
 					<div className="flex flex-col gap-y-3">
 						<InputField type="email" label="Email" icon="solar:user-bold-duotone" />
@@ -48,9 +54,10 @@ const RegisterComponent = () => {
 							<button
 								onClick={togglePassword}
 								type="button"
-								className="absolute right-2 top-1/2 translate-1/2 text-slate-400 transition-[color] ease-linear duration-75 hover:text-primary">
+								className="absolute right-3
+								 top-1/2 translate-1/2 text-slate-400 transition-[color] ease-linear duration-75 hover:text-primary">
 								<Icon
-									iconName={`${passwordRef.current && passwordRef.current.type === "text" ? "iconamoon:eye-off-duotone" : "solar:eye-bold-duotone"}`}
+									iconName={`${passwordvisibility ? "iconamoon:eye-off-duotone" : "solar:eye-bold-duotone"}`}
 									style="h-6 w-6 group-focus-within:text-primary-dark !transition-none"
 								/>
 							</button>
@@ -62,7 +69,7 @@ const RegisterComponent = () => {
 						</div>
 					</div>
 				</form>
-			</div>
+			</>
 		</div>
 	);
 };

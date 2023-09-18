@@ -37,7 +37,7 @@ export default function LoginComponent() {
 					</div>
 					<div className="my-6">
 						<button type="submit" className="w-full rounded-md py-3 tracking-wide font-bold text-white bg-primary hover:bg-primary-dark">
-							Login
+							Register
 						</button>
 					</div>
 				</form>

@@ -1,8 +1,8 @@
-import React from "react";
 import { create } from "zustand";
 
-function appStore() {
-	return <div>appStore</div>;
-}
-
-export default appStore;
+export const useAuthStore = create(function (set) {
+	return {
+		isVisible: false,
+		togglePassword: () => set((state) => ({ isVisible: !state.isVisible })),
+	};
+});
