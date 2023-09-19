@@ -22,9 +22,11 @@ const RegisterComponent = () => {
 	}
 
 	return (
-		<div className="md:p-4 w-[90%] sm:w-3/4 lg:w-3/5 mx-auto flex flex-col gap-6">
+		<div className="md:px-4 md:mb-32 lg:mb-0 md:mt-[6rem] w-[90%] sm:w-3/4 lg:w-3/5 mx-auto flex flex-col gap-6">
 			<div className="v-title">
-				<h1 className="text-4xl font-extrabold text-slate-800">Log in to your account</h1>
+				<h1 className="text-4xl font-extrabold text-slate-800">
+					Log in to your account<span className="text-primary">.</span>
+				</h1>
 			</div>
 			<div className="space-x-1">
 				<span className="font-semibold text-slate-600">Don't have an account?</span>
@@ -32,7 +34,7 @@ const RegisterComponent = () => {
 					Create one
 				</AnchorLink>
 			</div>
-			<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md hover:bg-zinc-100/40 w-full">
+			<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md bg-secondary text-slate-100 w-full">
 				<div className="flex items-center gap-2 justify-center">
 					<div className="v-image-wrapper">
 						<img src={GoogleImage} className="max-w-full h-auto w-8" />
@@ -62,10 +64,16 @@ const RegisterComponent = () => {
 								/>
 							</button>
 						</div>
-						<div className="mt-4">
+						<div className="mt-4 flex flex-col items-center gap-y-5">
 							<button type="submit" className="w-full rounded-md py-3 tracking-wide font-bold text-white bg-primary hover:bg-primary-dark">
 								Login
 							</button>
+							<div className="space-x-1">
+								<span>Can't remember my password,</span>
+								<AnchorLink href="/resetpassword" style="text-primary font-semibold underline">
+									help
+								</AnchorLink>
+							</div>
 						</div>
 					</div>
 				</form>

@@ -9,7 +9,7 @@ function index() {
 					<section className="lg:col-span-4 col-span-full text-white bg-primary-dark rounded-md flex items-center justify-center">
 						<PasscodeComponent />
 					</section>
-					<section className="bg-white col-span-full lg:col-span-8 pb-16 py-10 flex items-center justify-center overflow-y-auto rounded-t-[2rem] xl:rounded-none">
+					<section className="bg-white col-span-full lg:col-span-8 py-16 md:pt-72 lg:pt-10 flex items-center justify-center overflow-y-auto rounded-t-[2rem] lg:rounded-t-none">
 						<LoginComponent />
 					</section>
 				</div>

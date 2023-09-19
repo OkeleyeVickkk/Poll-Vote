@@ -1,7 +1,8 @@
-import React from "react";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-const index = () => {
-	return <div>index</div>;
-};
+export default function ProtectedRoute() {
+	const user = true;
+	const location = useLocation();
 
-export default index;
+	return user ? <Outlet /> : <Navigate to="/login" state={{ from: location }} replace />;
+}

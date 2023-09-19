@@ -4,17 +4,19 @@ import GoogleImage from "../../../assets/media/svgs/7123025_logo_google_g_icon.s
 
 export default function LoginComponent() {
 	return (
-		<div className="p-4 w-[90%] sm:w-3/4 lg:w-3/5 mx-auto flex flex-col gap-6">
+		<div className="sm:p-4 w-[90%] sm:w-3/4 md:mt-[4rem] lg:w-3/5 mx-auto flex flex-col gap-6">
 			<div className="v-title">
-				<h1 className="text-4xl font-extrabold text-slate-800">Sign up as a host</h1>
+				<h1 className="text-4xl font-extrabold text-slate-800">
+					Sign up as a host<span className="text-primary">.</span>
+				</h1>
 			</div>
 			<div className="space-x-1">
-				<span className="font-semibold text-slate-600">Have an account?</span>
+				<span className="font-semibold text-slate-600">Already a member?</span>
 				<AnchorLink href="/login" style="text-primary hover:text-primary-dark font-bold tracking-wide">
 					Login
 				</AnchorLink>
 			</div>
-			<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md hover:bg-zinc-100/40 w-full">
+			<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md bg-secondary text-slate-100 w-full">
 				<div className="flex items-center gap-2 justify-center">
 					<div className="v-image-wrapper">
 						<img src={GoogleImage} className="max-w-full h-auto w-8" />
@@ -37,7 +39,7 @@ export default function LoginComponent() {
 					</div>
 					<div className="my-6">
 						<button type="submit" className="w-full rounded-md py-3 tracking-wide font-bold text-white bg-primary hover:bg-primary-dark">
-							Register
+							Create account
 						</button>
 					</div>
 				</form>
