@@ -5,7 +5,7 @@ import GoBack from "../../components/GoBack";
 export default function Error() {
 	return (
 		<div className="min-h-screen grid place-content-center">
-			<div className="w-3/4 mx-auto flex flex-col items-center gap-y-3">
+			<div className="w-5/6 mx-auto flex flex-col items-center gap-y-3">
 				<div className="">
 					<img className="img-fluid" src={ErrorImage} alt="" />
 				</div>

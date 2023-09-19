@@ -15,7 +15,7 @@
 *::after {
 	transition: all 300ms ease-in-out;
 	text-rendering: optimizeLegibility;
-	font-family: CabinetGrotesk;
+	font-family: SpaceGrotesk, CabinetGrotesk;
 }
 body::-webkit-scrollbar {
 	display: none;

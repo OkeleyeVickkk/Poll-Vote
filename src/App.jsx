@@ -4,31 +4,33 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import LandingPage from "./pages";
 
 //auth
-import ResetPassword from "./feature/auth/ResetPassword";
-import Register from "./feature/auth/Register";
-import Login from "./feature/auth/Login";
+import RegisterComponent from "./feature/auth/register";
+import AuthLayout from "./feature/auth";
+import LoginComponent from "./feature/auth/login";
+import ResetPassword from "./feature/auth/resetPassword";
 
 //ProtectedPages
-import ProtectedRoute from "./pages/protectedPages";
+import Layout from "./pages/protectedPages/Layout";
 import Dashboard from "./pages/protectedPages/pages/dashboard";
 import Profile from "./pages/protectedPages/pages/profile";
 import Analytics from "./pages/protectedPages/pages/analytics";
-import Layout from "./pages/protectedPages/layout.jsx";
 
 // 404 page
 import Error from "./pages/error/Error.jsx";
-// import ProtectedErrorPage from "./pages/error/ProtectedErrorPage";
+import ProtectedPage from "./pages/protectedPages";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route>
-			<Route path="/" index Component={LandingPage} />
-			<Route path="/register" Component={Register} />
-			<Route path="/login" Component={Login} />
+			<Route index Component={LandingPage} />
+			<Route Component={AuthLayout}>
+				<Route path="register" Component={RegisterComponent} />
+				<Route path="login" Component={LoginComponent} />
+			</Route>
 			<Route path="/resetpassword" Component={ResetPassword} />
-			<Route Component={ProtectedRoute}>
+			<Route Component={ProtectedPage}>
 				<Route path="/dashboard" element={<Layout />}>
-					<Route path="index" element={<Dashboard />} />
+					<Route index path="/dashboard/" element={<Dashboard />} />
 					<Route path="analytics" element={<Analytics />} />
 					<Route path="profile" element={<Profile />} />
 				</Route>

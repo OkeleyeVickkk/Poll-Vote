@@ -5,19 +5,20 @@ const InputField = forwardRef(({ customStyle, label, icon, type, placeholder, va
 	return (
 		<div>
 			{label && (
-				<label className="font-bold text-sm text-black/80" htmlFor="">
+				<label className="font-bold text-sm text-black/80" htmlFor={label?.toLowerCase()}>
 					{label}
 				</label>
 			)}
 			<div className="relative group">
 				<input
-					className={`border-slate-300 transition ease-linear focus:border-primary-dark font-semibold placeholder:font-normal placeholder:text-sm text-slate-700 w-full outline-none focus:outline-none border caret-primary-dark ${
+					className={`border-slate-300 transition ease-linear focus:border-primary-dark font-medium placeholder:font-normal placeholder:text-sm text-slate-700 w-full outline-none focus:outline-none border caret-primary-dark ${
 						customStyle ? customStyle : "rounded-md text-sm sm:text-base min-h-[3rem]"
 					} ${icon ? "px-11" : "px-4"}`}
 					type={type}
 					onChange={onChangeFunc}
 					placeholder={placeholder}
 					value={value}
+					id={label?.toLowerCase()}
 					required
 					ref={type === "password" ? ref : null}
 				/>

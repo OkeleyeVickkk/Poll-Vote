@@ -10,7 +10,7 @@ export default function NavSideBar() {
 					<React.Fragment key={index}>
 						<AnchorNavLink
 							href={`${path}`}
-							style={({ isActive }) => `flex items-center p-2 rounded-md w-full capitalize py-2 ${isActive ? "bg-red-500" : ""}`}>
+							style={({ isActive }) => `flex items-center p-2 rounded-md w-full capitalize py-2 ${isActive ? "bg-slate-100" : ""} `}>
 							{Icon && <Icon />}
 							<span>{linkName}</span>
 						</AnchorNavLink>
@@ -24,8 +24,8 @@ export default function NavSideBar() {
 const links = [
 	{
 		linkName: "Home",
-		path: "index",
 		icon: "",
+		path: "",
 	},
 	{
 		linkName: "analytics",
