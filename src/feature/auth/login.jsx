@@ -4,6 +4,7 @@ import AnchorLink from "../../components/AnchorLink";
 import Icon from "../../components/Icon";
 import { useRef } from "react";
 import { useAuthStore } from "../store/appStore";
+import TransitionWrapper from "../../components/Layouts/wrapper";
 
 export default function LoginComponent() {
 	const passwordRef = useRef();
@@ -22,7 +23,7 @@ export default function LoginComponent() {
 	}
 
 	return (
-		<section className="bg-white col-span-full lg:col-span-8 py-16 md:pt-72 lg:pt-10 flex items-center justify-center overflow-y-auto rounded-t-[2rem] lg:rounded-t-none">
+		<TransitionWrapper className="bg-white col-span-full lg:col-span-8 py-16 md:pt-72 lg:pt-10 flex items-center justify-center overflow-y-auto rounded-t-[2rem] lg:rounded-t-none">
 			<div className="md:px-4 md:mb-32 lg:mb-0 md:mt-[6rem] w-[90%] sm:w-3/4 lg:w-3/5 mx-auto flex flex-col gap-6">
 				<div className="v-title">
 					<h1 className="text-4xl font-extrabold text-slate-800">
@@ -72,7 +73,7 @@ export default function LoginComponent() {
 									Login
 								</button>
 								<div className="space-x-1">
-									<span>Can't remember my password,</span>
+									<span>Don't remember my password,</span>
 									<AnchorLink href="/resetpassword" style="text-primary font-semibold underline">
 										help
 									</AnchorLink>
@@ -82,6 +83,6 @@ export default function LoginComponent() {
 					</form>
 				</>
 			</div>
-		</section>
+		</TransitionWrapper>
 	);
 }

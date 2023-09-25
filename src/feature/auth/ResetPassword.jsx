@@ -1,11 +1,12 @@
 import InputField from "../../components/InputField";
 import Icon from "../../components/Icon";
 import useGoBack from "../../hooks/useGoBack";
+import TransitionWrapper from "../../components/Layouts/wrapper";
 
 export default function ResetPassword() {
 	const goBack = useGoBack();
 	return (
-		<div className="min-h-screen w-full flex items-center justify-center relative px-3">
+		<TransitionWrapper className="min-h-screen w-full flex items-center justify-center relative px-3">
 			<div className="absolute bg-primary w-80 h-80 rounded-full -z-[1] left-0 top-0 lg:-translate-y-1/4 lg:-translate-x-1/4 -translate-y-48 -translate-x-1/2 scale-125 "></div>
 			<div className="w-full mx-auto max-w-md">
 				<button className="flex items-center gap-x-1 text-slate-500" type="button" onClick={() => goBack()}>
@@ -25,6 +26,6 @@ export default function ResetPassword() {
 					</div>
 				</form>
 			</div>
-		</div>
+		</TransitionWrapper>
 	);
 }

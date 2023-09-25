@@ -7,6 +7,7 @@ import hand1 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_A4.png";
 import hand2 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B2.png";
 import hand3 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B3.png";
 import hand4 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B4.png";
+import TransitionWrapper from "../components/Layouts/wrapper";
 
 const getPath = (image) => {
 	return `poll-vote-${image.split("/" || "\\").at(-1)}`;
@@ -14,7 +15,7 @@ const getPath = (image) => {
 
 export default function LandingPage() {
 	return (
-		<div className="max-w-4xl mx-auto min-h-screen">
+		<TransitionWrapper className="max-w-4xl mx-auto min-h-screen">
 			<>
 				<Header />
 			</>
@@ -53,6 +54,6 @@ export default function LandingPage() {
 					</div>
 				</div>
 			</>
-		</div>
+		</TransitionWrapper>
 	);
 }

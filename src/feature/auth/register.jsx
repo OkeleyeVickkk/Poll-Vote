@@ -1,10 +1,11 @@
 import InputField from "../../components/InputField";
 import AnchorLink from "../../components/AnchorLink";
 import GoogleImage from "../../assets/media/svgs/7123025_logo_google_g_icon.svg";
+import TransitionWrapper from "../../components/Layouts/wrapper";
 
 export default function RegisterComponent() {
 	return (
-		<section className="bg-white col-span-full lg:col-span-8 py-10 md:pt-72 lg:pt-32 flex items-center justify-center overflow-y-auto rounded-t-[3rem] lg:rounded-t-none">
+		<TransitionWrapper className="min-h-[80vh] bg-white col-span-full lg:col-span-8 py-16 md:pt-72 lg:pt-32 flex items-center justify-center overflow-y-auto rounded-t-[3rem] lg:rounded-t-none">
 			<div className="sm:p-4 w-[90%] sm:w-3/4 md:mt-[4rem] lg:w-3/5 mx-auto flex flex-col gap-6">
 				<div className="v-title">
 					<h1 className="text-4xl font-extrabold text-slate-800">
@@ -48,6 +49,6 @@ export default function RegisterComponent() {
 					</form>
 				</div>
 			</div>
-		</section>
+		</TransitionWrapper>
 	);
 }

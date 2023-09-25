@@ -1,9 +1,10 @@
+import TransitionWrapper from "../../components/Layouts/wrapper";
 import PasscodeComponent from "./passcode";
 import { Outlet } from "react-router-dom";
 
 export default function AuthLayout() {
 	return (
-		<>
+		<TransitionWrapper>
 			<main>
 				<div className="min-h-screen">
 					<div className="h-full xl:p-1 grid grid-cols-12 min-h-screen bg-primary-dark xl:bg-transparent md:fixed w-full">
@@ -14,6 +15,6 @@ export default function AuthLayout() {
 					</div>
 				</div>
 			</main>
-		</>
+		</TransitionWrapper>
 	);
 }

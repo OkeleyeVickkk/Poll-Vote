@@ -1,9 +1,9 @@
 import InputField from "../../components/InputField";
 import Icon from "../../components/Icon";
 
-const PasscodeComponent = () => {
+export default function PasscodeComponent() {
 	return (
-		<div className="sm:p-4 w-5/6 sm:w-3/5 md:w-11/12 py-24">
+		<div className="sm:p-4 w-5/6 sm:w-4/5 md:w-11/12 py-4 my-12 md:my-20">
 			<div className="flex flex-col gap-y-3">
 				<h1 className="text-3xl md:text-4xl font-extrabold md:w-3/4">Joining as a Participant ?</h1>
 				<span>No account needed.</span>
@@ -19,6 +19,4 @@ const PasscodeComponent = () => {
 			</div>
 		</div>
 	);
-};
-
-export default PasscodeComponent;
+}

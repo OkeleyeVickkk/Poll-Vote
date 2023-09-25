@@ -1,5 +1,5 @@
-import DashboardPageContentWrapper from "../../../components/Layouts/wrapper";
+import TransitionWrapper from "../../../components/Layouts/wrapper";
 
 export default function Dashboard() {
-	return <DashboardPageContentWrapper>Dashboard</DashboardPageContentWrapper>;
+	return <TransitionWrapper>Something is not right with this</TransitionWrapper>;
 }

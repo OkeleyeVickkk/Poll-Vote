@@ -1,5 +1,5 @@
-import DashboardPageContentWrapper from "../../../components/Layouts/wrapper";
+import TransitionWrapper from "../../../components/Layouts/wrapper";
 
 export default function Profile() {
-	return <DashboardPageContentWrapper>Profile</DashboardPageContentWrapper>;
+	return <TransitionWrapper>Profile</TransitionWrapper>;
 }

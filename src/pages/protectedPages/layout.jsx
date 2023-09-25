@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import NavSideBar from "./components/sidebar";
 
-export default function Layout() {
+const Layout = () => {
 	return (
 		<div className="flex min-h-screen">
-			<div className="w-[24%] border-r border-solid border-slate-600 bg-red-300">
+			<div className="w-[24%]">
 				<NavSideBar />
 			</div>
 			<div className="w-[76%]">
@@ -12,4 +12,6 @@ export default function Layout() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default Layout;
