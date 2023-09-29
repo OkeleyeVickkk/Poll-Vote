@@ -9,7 +9,7 @@ import hand3 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B3.png";
 import hand4 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B4.png";
 import TransitionWrapper from "../components/Layouts/wrapper";
 
-const getPath = (image) => {
+export const getPath = (image) => {
 	return `poll-vote-${image.split("/" || "\\").at(-1)}`;
 };
 
@@ -32,7 +32,7 @@ export default function LandingPage() {
 						<h1 className="text-4xl sm:text-6xl font-extrabold">
 							The easiest way to make your polls <span className="text-ash">fair</span> & <span className="text-ash">transparent.</span> Go with
 							<br />
-							<span className="text-primary"> Poll-Vote</span>
+							<span className="text-primary">Poll-Vote</span>
 						</h1>
 						<div className="relative">
 							<span className="text-base sm:text-lg font-normal text-opacity-90 pt-2 relative">

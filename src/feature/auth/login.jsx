@@ -5,6 +5,7 @@ import Icon from "../../components/Icon";
 import { useRef } from "react";
 import { useAuthStore } from "../store/appStore";
 import TransitionWrapper from "../../components/Layouts/wrapper";
+import { getPath } from "../../pages";
 
 export default function LoginComponent() {
 	const passwordRef = useRef();
@@ -39,7 +40,7 @@ export default function LoginComponent() {
 				<button type="button" className="flex items-center justify-center border py-2 px-3 rounded-md bg-secondary text-slate-100 w-full">
 					<div className="flex items-center gap-2 justify-center">
 						<div className="v-image-wrapper">
-							<img src={GoogleImage} className="max-w-full h-auto w-8" />
+							<img src={GoogleImage} alt={getPath(GoogleImage)} className="max-w-full h-auto w-8" />
 						</div>
 						<span className="font-medium text-sm">Log in with Google</span>
 					</div>
