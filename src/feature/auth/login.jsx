@@ -33,7 +33,7 @@ export default function LoginComponent() {
 				</div>
 				<div className="space-x-1">
 					<span className="font-semibold text-slate-600">Don't have an account?</span>
-					<AnchorLink href="/register" style="text-primary hover:text-primary-dark font-semibold tracking-wide">
+					<AnchorLink href="/register" style="text-primary hover:text-primary-dark font-bold tracking-wide">
 						Create one
 					</AnchorLink>
 				</div>

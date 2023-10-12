@@ -1,12 +1,9 @@
 import Header from "../components/Layouts/Header";
 import { Link } from "react-router-dom";
-import Icon from "../components/Icon";
+import Icon, { Loader } from "../components/Icon";
 import sparkle from "../assets/media/svgs/sparkles-one.svg";
 import Scribble from "../assets/media/svgs/scribbble.svg";
 import hand1 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_A4.png";
-import hand2 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B2.png";
-import hand3 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B3.png";
-import hand4 from "../assets/media/image/Thumbs_Up_or_Down_R-Angle_B4.png";
 import TransitionWrapper from "../components/Layouts/wrapper";
 
 export const getPath = (image) => {
@@ -20,6 +17,7 @@ export default function LandingPage() {
 				<Header />
 			</>
 			<>
+				{/* <Loader /> */}
 				<div className="grid grid-cols-12 place-items-center relative">
 					<div className="absolute -left-16 -top-20 sm:top-0 scale-[0.3] sm:scale-50">
 						<img src={sparkle} alt={getPath(sparkle)} className="img-fluid" />

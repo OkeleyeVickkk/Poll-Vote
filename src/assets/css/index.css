@@ -1,3 +1,5 @@
+@import url("./animations.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +17,7 @@
 *::after {
 	transition: all 300ms ease-in-out;
 	text-rendering: optimizeLegibility;
-	font-family: SpaceGrotesk, CabinetGrotesk;
+	font-family: CabinetGrotesk;
 }
 body::-webkit-scrollbar {
 	display: none;
